@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        :root {
+            --bg: #000000;
+            --card: #16181c;
+            --text-primary: #e7e9ea;
+            --text-secondary: #8b98a5;
+            --accent: #1d9bf0;
+            --border-subtle: #2f3336;
+        }
+
+        body {
+            width: 320px;
+            padding: 16px;
+            margin: 0;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--bg);
+            color: var(--text-primary);
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 16px;
+        }
+
+        .title {
+            font-size: 16px;
+            font-weight: 600;
+        }
+
+        .badge {
+            font-size: 11px;
+            padding: 3px 8px;
+            border-radius: 999px;
+            border: 1px solid var(--border-subtle);
+            color: var(--text-secondary);
+        }
+
+        .card {
+            background: var(--card);
+            border-radius: 12px;
+            padding: 12px 12px 10px;
+            border: 1px solid var(--border-subtle);
+            margin-bottom: 10px;
+        }
+
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 6px;
+        }
+
+        .label {
+            font-size: 12px;
+            color: var(--text-secondary);
+        }
+
+        .value {
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+
+        .subtext {
+            font-size: 11px;
+            color: var(--text-secondary);
+        }
+
+        .streak {
+            margin-top: 4px;
+            font-size: 11px;
+            color: var(--accent);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <div class="title">Catalyx</div>
+        <div class="badge">Today</div>
+    </div>
+
+    <div class="card">
+        <div class="card-header">
+            <span class="label">Comments</span>
+            <span class="value" id="comments">0 / 20</span>
+        </div>
+        <div class="subtext">Meaningful replies on X</div>
+    </div>
+
+    <div class="card">
+        <div class="card-header">
+            <span class="label">Posts</span>
+            <span class="value" id="posts">0 / 4</span>
+        </div>
+        <div class="subtext">Tweets or long-form posts</div>
+    </div>
+
+    <div class="card">
+        <div class="card-header">
+            <span class="label">Streak</span>
+            <span class="value"><span id="streak">0</span> days</span>
+        </div>
+        <div class="subtext">Days hitting your growth targets</div>
+    </div>
+
+    <script src="/popup/popup.js"></script>
+</body>
+
+</html>
