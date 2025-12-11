@@ -77,6 +77,21 @@
             font-size: 11px;
             color: var(--accent);
         }
+
+        .progress-container {
+            margin-top: 6px;
+            height: 4px;
+            background: #2f3336;
+            border-radius: 999px;
+            overflow: hidden;
+        }
+
+        .progress-fill {
+            height: 100%;
+            width: 0%;
+            background: #1d9bf0;
+            transition: width 0.2s ease-out;
+        }
     </style>
 </head>
 
@@ -92,6 +107,9 @@
             <span class="value" id="comments">0 / 20</span>
         </div>
         <div class="subtext">Meaningful replies on X</div>
+        <div class="progress-container">
+            <div class="progress-fill" id="comments-progress"></div>
+        </div>
     </div>
 
     <div class="card">
@@ -100,6 +118,9 @@
             <span class="value" id="posts">0 / 4</span>
         </div>
         <div class="subtext">Tweets or long-form posts</div>
+        <div class="progress-container">
+            <div class="progress-fill" id="posts-progress"></div>
+        </div>
     </div>
 
     <div class="card">

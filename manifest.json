@@ -9,5 +9,16 @@
     },
     "permissions": [
         "storage"
+    ],
+    "content_scripts": [
+        {
+            "matches": [
+                "https://twitter.com/*",
+                "https://x.com/*"
+            ],
+            "js": [
+                "content/content.js"
+            ]
+        }
     ]
 }
