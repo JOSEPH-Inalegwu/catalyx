@@ -2,6 +2,8 @@
 <html>
 
 <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <style>
         :root {
             --bg: #000000;
@@ -92,6 +94,23 @@
             background: #1d9bf0;
             transition: width 0.2s ease-out;
         }
+
+        .subtitle {
+            margin-top: -4px;
+            margin-bottom: 8px;
+            font-size: 11px;
+            color: var(--text-secondary);
+        }
+
+        #catalyx-confetti {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 9999;
+        }
     </style>
 </head>
 
@@ -100,6 +119,8 @@
         <div class="title">Catalyx</div>
         <div class="badge">Today</div>
     </div>
+
+    <div class="subtitle" id="today-status">Today: in progress</div>
 
     <div class="card">
         <div class="card-header">
@@ -130,6 +151,10 @@
         </div>
         <div class="subtext">Days hitting your growth targets</div>
     </div>
+
+    <canvas id="catalyx-confetti"></canvas>
+
+    <script src="/popup/index.min.js"></script>
 
     <script src="/popup/popup.js"></script>
 </body>
