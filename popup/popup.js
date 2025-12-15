@@ -70,6 +70,7 @@ chrome.storage.sync.get(['catalyxCounts', 'catalyxMeta'], (result) => {
         ...DEFAULT_STATE,
         comments: counts.comments ?? 0,
         posts: counts.posts ?? 0,
+        streak: meta.streak ?? 0,
         todayCelebrated: meta.todayCelebrated ?? false,
     };
 
